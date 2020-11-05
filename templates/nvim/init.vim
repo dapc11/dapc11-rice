@@ -16,6 +16,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --omnisha
 Plug 'ap/vim-css-color'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
@@ -80,8 +81,8 @@ endif
 let g:airline_symbols.maxlinenr = ''
 
 " Colorscheme
-set bg=dark
-let base16colorspace=256  " Access colors present in 256 colorspace
+"set bg=dark
+"let base16colorspace=256  " Access colors present in 256 colorspace
 set termguicolors
 colorscheme {{vim_colorscheme}}
 

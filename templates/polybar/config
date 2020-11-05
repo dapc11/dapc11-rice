@@ -23,7 +23,7 @@ bottom = false
 background = {{base01}}
 foreground = {{base06}}
 
-font-0 = {{font}}:style=Regular:size=12;2
+font-0 = {{font}}:style=Regular:size=11;2
 font-1 = NotoSans-Regular;2
 font-2 = Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular;2
 font-3 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid;2
@@ -42,9 +42,6 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 label-font = 0
-
-#label-empty = Error : 404
-#label-empty-foreground = #e34234
 
 [module/battery]
 type = internal/battery
@@ -135,12 +132,12 @@ date =  %Y-%m-%d  %H:%M:%S
 
 [module/wireless-network]
 type = internal/network
-label-connected = "%{A1:xterm -e sh -c 'nmtui':} %essid%%{A}"
+label-connected = "%{A1:xterm -e sh -c 'nmtui':} %signal%%%{A}"
 label-disconnected = "%{A1:xterm -e sh -c 'nmtui':} 睊 %{A}"
 label-disconnected-foreground = {{base08}}
 
 interface = {{wifi_if}}
-interval = 2.0
+interval = 5.0
 
 format-connected =  <label-connected>
 format-disconnected =  <label-disconnected>
